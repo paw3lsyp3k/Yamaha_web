@@ -1,0 +1,292 @@
+* {
+  margin: 0;
+  padding: 0;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+body {
+  font-family: 'Montserrat', sans-serif;
+  height: 100vh;
+}
+
+a {
+  color: #9c88ff;
+  text-decoration: none;
+}
+
+.mainWrapper {
+  width: 100%;
+  height: 100%;
+  background-image: url(../assets/background.jpg);
+  background-position: bottom;
+  background-size: cover;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  padding-left: 15%;
+}
+
+.mainWrapper .topBar {
+  width: 100%;
+  height: 5vmax;
+  position: absolute;
+  top: 0;
+  left: 0;
+  background-color: bisque;
+}
+
+.mainWrapper h1 {
+  font-size: 5vmax;
+  color: white;
+  font-weight: 600;
+  line-height: 6vmax;
+}
+
+.mainWrapper h2 {
+  width: 38%;
+  color: white;
+  font-size: 1.3vmax;
+  font-weight: 400;
+  margin-top: -4%;
+  line-height: 1.7vmax;
+}
+
+.mainWrapper .mainWrapperButton {
+  width: 20vmax;
+  height: 3vmax;
+  background-color: blanchedalmond;
+}
+
+.counterWrapper {
+  width: 100%;
+  background: linear-gradient(-2deg, #9c88ff 22%, rgba(0, 0, 0, 0) 22.3%);
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  padding: 5% 5% 10% 5%;
+}
+
+.offerWrapper {
+  background: linear-gradient(-1.5deg, #292929 3%, rgba(0, 0, 0, 0) 3.1%);
+  padding: 10% 25% 10% 25%;
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: (1fr)[3];
+      grid-template-columns: repeat(3, 1fr);
+  -ms-grid-rows: (1fr)[5];
+      grid-template-rows: repeat(5, 1fr);
+  grid-gap: 3vmax;
+}
+
+.offerWrapper .offerTitle {
+  -ms-grid-column: 1;
+      grid-column-start: 1;
+  grid-column-end: 4;
+  text-align: center;
+  font-weight: 400;
+  font-size: 1.7vmax;
+}
+
+.offerWrapper .offerTitle a {
+  font-weight: bold;
+}
+
+.offerWrapper .offerBox {
+  background-color: pink;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.offerWrapper .offerBox .offerBoxIcon {
+  width: 5vmax;
+  height: 5vmax;
+  background-color: darkorange;
+}
+
+.offerWrapper .offerBox .offerBoxTitle h3 {
+  font-weight: 400;
+  font-size: 1.1vmax;
+  padding: 3vmax 10% 2vmax 10%;
+  text-align: center;
+}
+
+.offerWrapper .offerBox .offerBoxBar {
+  width: 100%;
+  height: 5px;
+  border-radius: 10px;
+  background-color: #9c88ff;
+}
+
+.offerWrapper .offerMore {
+  background-color: darkmagenta;
+  -ms-grid-column: 1;
+      grid-column-start: 1;
+  grid-column-end: 4;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  padding: 1vmax 15% 1vmax 15%;
+}
+
+.offerWrapper .offerMore h2 {
+  font-weight: 400;
+  font-size: 1.7vmax;
+  text-align: center;
+}
+
+.offerWrapper .offerButton {
+  background-color: #9c88ff;
+  width: 12vmax;
+  height: 3vmax;
+  border-radius: 30px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  font-size: 1vmax;
+  color: white;
+  font-weight: 500;
+}
+
+.reviewWrapper {
+  width: 100%;
+  background: linear-gradient(-2deg, #9c88ff 13%, rgba(0, 0, 0, 0) 13.2%);
+  background-color: #292929;
+  padding: 3% 0 7% 0;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+.reviewWrapper h1 {
+  font-weight: 600;
+  font-size: 2.2vmax;
+  color: white;
+  margin-bottom: 7%;
+}
+
+.reviewWrapper .reviewContainer {
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+}
+
+.reviewWrapper .reviewContainer .arrow {
+  width: 4vmax;
+  height: 4vmax;
+  background-color: tomato;
+}
+
+.reviewWrapper .reviewContainer .reviewSection {
+  width: 60%;
+  overflow-x: hidden;
+}
+
+.reviewWrapper .reviewContainer .reviewSection .reviewContent {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
+}
+
+.reviewWrapper .reviewContainer .reviewSection .reviewContent .reviewBox {
+  min-width: 50%;
+  padding: 2% 5% 5% 5%;
+  text-align: center;
+}
+
+.reviewWrapper .reviewContainer .reviewSection .reviewContent .reviewBox p {
+  font-size: 1vmax;
+  color: white;
+  font-weight: 400;
+  margin-bottom: 2vmax;
+}
+
+.reviewWrapper .reviewContainer .reviewSection .reviewContent .reviewBox h2 {
+  font-size: 1.6vmax;
+  color: #9c88ff;
+  font-weight: 400;
+}
+
+.reviewWrapper .reviewDots {
+  width: 10%;
+  height: 2vmax;
+  background-color: yellowgreen;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+}
+
+.reviewWrapper .reviewDots .dot {
+  width: 2vmax;
+  height: 2vmax;
+  background-color: violet;
+}
+/*# sourceMappingURL=style.css.map */

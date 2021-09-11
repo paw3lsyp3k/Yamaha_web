@@ -1,0 +1,200 @@
+$maincolor: #9c88ff;
+
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Montserrat', sans-serif;
+    height: 100vh;
+}
+
+a{
+    color: $maincolor;
+    text-decoration: none;
+}
+
+.mainWrapper{
+    width: 100%;
+    height: 100%;
+    background-image: url(../assets/background.jpg);
+    background-position: bottom;
+    background-size: cover;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: space-around;
+    padding-left: 15%;
+    .topBar{
+        width: 100%;
+        height: 5vmax;
+        position: absolute;
+        top: 0;
+        left: 0;
+        background-color: bisque;
+    }
+    h1{
+        font-size: 5vmax;
+        color: white;
+        font-weight: 600;
+        line-height: 6vmax;
+    }
+    h2{
+        width: 38%;
+        color: white;
+        font-size: 1.3vmax;
+        font-weight: 400;
+        margin-top: -4%;
+        line-height: 1.7vmax;
+    }
+    .mainWrapperButton{
+        width: 20vmax;
+        height: 3vmax;
+        background-color: blanchedalmond;
+    }
+}
+.counterWrapper{
+    width: 100%;
+    background: linear-gradient(-2deg, $maincolor 22%, rgba(0, 0, 0, 0) 22.3%);
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    padding: 5% 5% 10% 5%;
+}
+.offerWrapper{
+    background: linear-gradient(-1.5deg, #292929 3%, rgba(0, 0, 0, 0) 3.1%);
+    padding: 10% 25% 10% 25%;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(5,1fr);
+    grid-gap: 3vmax;
+    .offerTitle{
+        grid-column-start: 1;
+        grid-column-end: 4;
+        text-align: center;
+        font-weight: 400;
+        font-size: 1.7vmax;
+        a{
+            font-weight: bold;
+        }
+    }
+    .offerBox{
+        background-color: pink;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        .offerBoxIcon{
+            width: 5vmax;
+            height: 5vmax;
+            background-color: darkorange;
+        }
+        .offerBoxTitle h3{
+            font-weight: 400;
+            font-size: 1.1vmax;
+            padding: 3vmax 10% 2vmax 10%;
+            text-align: center;
+        }
+        .offerBoxBar{
+            width: 100%;
+            height: 5px;
+            border-radius: 10px;
+            background-color: $maincolor;
+        }
+    }
+    .offerMore{
+        background-color: darkmagenta;
+        grid-column-start: 1;
+        grid-column-end: 4;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: space-around;
+        padding: 1vmax 15% 1vmax 15%;
+        h2{
+            font-weight: 400;
+            font-size: 1.7vmax;
+            text-align: center;
+        }
+    }
+    .offerButton{
+        background-color: $maincolor;
+        width: 12vmax;
+        height: 3vmax;
+        border-radius: 30px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        font-size: 1vmax;
+        color: white;
+        font-weight: 500;
+    }
+}
+.reviewWrapper{
+    width: 100%;
+    background: linear-gradient(-2deg, $maincolor 13%, rgba(0, 0, 0, 0) 13.2%);
+    background-color: #292929;
+    padding: 3% 0 7% 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    h1{
+        font-weight: 600;
+        font-size: 2.2vmax;
+        color: white;
+        margin-bottom: 7%;
+    }
+    .reviewContainer{
+        width: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: space-around;
+        .arrow{
+            width: 4vmax;
+            height: 4vmax;
+            background-color: tomato;
+        }
+        .reviewSection{
+            width: 60%;
+            overflow-x: hidden;
+            .reviewContent{
+                display: flex;
+                align-items: center;
+                justify-content: flex-start;
+                .reviewBox{
+                    min-width: 50%;
+                    padding: 2% 5% 5% 5%;
+                    text-align: center;
+                    p{
+                        font-size: 1vmax;
+                        color: white;
+                        font-weight: 400;
+                        margin-bottom: 2vmax;
+                    }
+                    h2{
+                        font-size: 1.6vmax;
+                        color: $maincolor;
+                        font-weight: 400;
+                    }
+                }
+            }
+        }
+    }
+    .reviewDots{
+        width: 10%;
+        height: 2vmax;
+        background-color: yellowgreen;
+        display: flex;
+        align-items: center;
+        justify-content: space-around;
+        .dot{
+            width: 2vmax;
+            height: 2vmax;
+            background-color: violet;
+        }
+    }
+}
