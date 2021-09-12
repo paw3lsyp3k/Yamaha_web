@@ -198,3 +198,66 @@ a{
         }
     }
 }
+
+.contactWrapper{
+    width: 100%;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: repeat(3, 1fr);
+    padding: 5% 10% 5% 10%;
+    h2{
+        font-size: 1.5vmax;
+        font-weight: 400;
+    }
+    p {
+        font-size: 1vmax;
+    }
+    .contactTitle{
+        grid-column-start: 1;
+        grid-column-end: 3;
+        grid-row-start: 1;
+        grid-row-end: 2;
+        font-size: 2.8vmax;
+        font-weight: 500;
+        a{
+            font-weight: 600;
+        }
+    }
+    .contactAddres1{
+        grid-column-start: 1;
+        grid-column-end: 2;
+        grid-row-start: 2;
+        grid-row-end: 3;
+        padding: 1vmax;
+        
+    }
+    .contactAddres2{
+        grid-column-start: 2;
+        grid-column-end: 3;
+        grid-row-start: 2;
+        grid-row-end: 3;
+        padding: 1vmax;
+    }
+    .contactPhone{
+        grid-column-start: 1;
+        grid-column-end: 2;
+        grid-row-start: 3;
+        grid-row-end: 4;
+        padding: 2vmax 1vmax;
+    }
+    .contactEmail{
+        grid-column-start: 2;
+        grid-column-end: 3;
+        grid-row-start:3;
+        grid-row-end: 4;
+        padding: 2vmax 1vmax;
+    }
+    .contactSocials{
+        background-color: deepskyblue;
+        grid-column-start: 4;
+        grid-column-end: 5;
+        grid-row-start: 3;
+        grid-row-end: 4;
+    }
+
+}

@@ -289,4 +289,89 @@ a {
   height: 2vmax;
   background-color: violet;
 }
+
+.contactWrapper {
+  width: 100%;
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: (1fr)[4];
+      grid-template-columns: repeat(4, 1fr);
+  -ms-grid-rows: (1fr)[3];
+      grid-template-rows: repeat(3, 1fr);
+  padding: 5% 10% 5% 10%;
+}
+
+.contactWrapper h2 {
+  font-size: 1.5vmax;
+  font-weight: 400;
+}
+
+.contactWrapper p {
+  font-size: 1vmax;
+}
+
+.contactWrapper .contactTitle {
+  -ms-grid-column: 1;
+      grid-column-start: 1;
+  grid-column-end: 3;
+  -ms-grid-row: 1;
+      grid-row-start: 1;
+  grid-row-end: 2;
+  font-size: 2.8vmax;
+  font-weight: 500;
+}
+
+.contactWrapper .contactTitle a {
+  font-weight: 600;
+}
+
+.contactWrapper .contactAddres1 {
+  -ms-grid-column: 1;
+      grid-column-start: 1;
+  grid-column-end: 2;
+  -ms-grid-row: 2;
+      grid-row-start: 2;
+  grid-row-end: 3;
+  padding: 1vmax;
+}
+
+.contactWrapper .contactAddres2 {
+  -ms-grid-column: 2;
+      grid-column-start: 2;
+  grid-column-end: 3;
+  -ms-grid-row: 2;
+      grid-row-start: 2;
+  grid-row-end: 3;
+  padding: 1vmax;
+}
+
+.contactWrapper .contactPhone {
+  -ms-grid-column: 1;
+      grid-column-start: 1;
+  grid-column-end: 2;
+  -ms-grid-row: 3;
+      grid-row-start: 3;
+  grid-row-end: 4;
+  padding: 2vmax 1vmax;
+}
+
+.contactWrapper .contactEmail {
+  -ms-grid-column: 2;
+      grid-column-start: 2;
+  grid-column-end: 3;
+  -ms-grid-row: 3;
+      grid-row-start: 3;
+  grid-row-end: 4;
+  padding: 2vmax 1vmax;
+}
+
+.contactWrapper .contactSocials {
+  background-color: deepskyblue;
+  -ms-grid-column: 4;
+      grid-column-start: 4;
+  grid-column-end: 5;
+  -ms-grid-row: 3;
+      grid-row-start: 3;
+  grid-row-end: 4;
+}
 /*# sourceMappingURL=style.css.map */
