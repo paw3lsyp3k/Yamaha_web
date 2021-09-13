@@ -83,14 +83,14 @@ a {
 
 .offerWrapper {
   background: linear-gradient(-1.5deg, #292929 3%, rgba(0, 0, 0, 0) 3.1%);
-  padding: 10% 25% 10% 25%;
+  padding: 5% 25% 5% 25%;
   display: -ms-grid;
   display: grid;
   -ms-grid-columns: (1fr)[3];
       grid-template-columns: repeat(3, 1fr);
   -ms-grid-rows: (1fr)[5];
       grid-template-rows: repeat(5, 1fr);
-  grid-gap: 3vmax;
+  grid-gap: 5vmax;
 }
 
 .offerWrapper .offerTitle {
@@ -107,7 +107,6 @@ a {
 }
 
 .offerWrapper .offerBox {
-  background-color: pink;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -118,18 +117,25 @@ a {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
 }
 
 .offerWrapper .offerBox .offerBoxIcon {
   width: 5vmax;
   height: 5vmax;
-  background-color: darkorange;
+}
+
+.offerWrapper .offerBox .offerBoxIcon img {
+  width: 100%;
+  height: 100%;
 }
 
 .offerWrapper .offerBox .offerBoxTitle h3 {
   font-weight: 400;
   font-size: 1.1vmax;
-  padding: 3vmax 10% 2vmax 10%;
+  padding: 3vmax 5% 2vmax 5%;
   text-align: center;
 }
 
@@ -141,7 +147,6 @@ a {
 }
 
 .offerWrapper .offerMore {
-  background-color: darkmagenta;
   -ms-grid-column: 1;
       grid-column-start: 1;
   grid-column-end: 4;
@@ -162,7 +167,7 @@ a {
 
 .offerWrapper .offerMore h2 {
   font-weight: 400;
-  font-size: 1.7vmax;
+  font-size: 2vmax;
   text-align: center;
 }
 
@@ -271,9 +276,8 @@ a {
 }
 
 .reviewWrapper .reviewDots {
-  width: 10%;
+  width: 4%;
   height: 2vmax;
-  background-color: yellowgreen;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -285,9 +289,10 @@ a {
 }
 
 .reviewWrapper .reviewDots .dot {
-  width: 2vmax;
-  height: 2vmax;
-  background-color: violet;
+  width: 0.6vmax;
+  height: 0.6vmax;
+  border-radius: 50%;
+  background-color: white;
 }
 
 .contactWrapper {
@@ -366,12 +371,61 @@ a {
 }
 
 .contactWrapper .contactSocials {
-  background-color: deepskyblue;
   -ms-grid-column: 4;
       grid-column-start: 4;
   grid-column-end: 5;
   -ms-grid-row: 3;
       grid-row-start: 3;
   grid-row-end: 4;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.contactWrapper .contactSocials .socialsContainer {
+  width: 60%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.contactWrapper .contactSocials .socialsContainer .social {
+  width: 2.5vmax;
+  height: 2.5vmax;
+  background-color: whitesmoke;
+  background-position: center;
+  background-size: cover;
+}
+
+.contactWrapper .contactSocials .socialsContainer .Facebook {
+  background-image: url(../assets/icons/facebook.png);
+}
+
+.contactWrapper .contactSocials .socialsContainer .Instagram {
+  background-image: url(../assets/icons/instagram.png);
+}
+
+.contactWrapper .contactSocials .socialsContainer .Youtube {
+  background-image: url(../assets/icons/youtube.png);
+}
+
+.footer {
+  width: 100%;
+  height: 3vmax;
+  background-color: #9c88ff;
 }
 /*# sourceMappingURL=style.css.map */
