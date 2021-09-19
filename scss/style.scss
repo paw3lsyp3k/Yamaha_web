@@ -55,6 +55,27 @@ a{
         height: 3vmax;
         background-color: blanchedalmond;
     }
+    .goUp{       
+        position: fixed;
+        top: 85%;
+        right: 3vmax;
+        width: 3vmax;
+        height: 3vmax;
+        border-radius: 50%;
+        background-color: #9c88ff;
+        -webkit-box-shadow: 4px 4px 12px 0px rgb(0, 0, 0);
+        -moz-box-shadow: 4px 4px 12px 0px rgb(0, 0, 0);
+        box-shadow: 4px 4px 12px 0px rgb(0, 0, 0);
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        cursor: pointer;
+        img{
+            width: 40%;
+            height: 40%;
+            transform: rotate(270deg);
+        }
+    }
 }
 .counterWrapper{
     width: 100%;
