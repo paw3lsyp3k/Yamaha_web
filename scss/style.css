@@ -78,7 +78,23 @@ a {
           align-items: center;
   -ms-flex-pack: distribute;
       justify-content: space-around;
-  padding: 5% 5% 10% 5%;
+  padding: 4% 5% 8% 5%;
+}
+
+.counterWrapper .counterBox {
+  text-align: center;
+}
+
+.counterWrapper .counterBox .counter {
+  font-size: 1.8vmax;
+  padding-bottom: 1vmax;
+  color: #9c88ff;
+  font-weight: 500;
+}
+
+.counterWrapper .counterBox h3 {
+  font-weight: 400;
+  font-size: 1.4vmax;
 }
 
 .offerWrapper {
@@ -234,9 +250,20 @@ a {
 }
 
 .reviewWrapper .reviewContainer .arrow {
-  width: 4vmax;
-  height: 4vmax;
-  background-color: tomato;
+  width: 3vmax;
+  height: 3vmax;
+  cursor: pointer;
+}
+
+.reviewWrapper .reviewContainer .arrow img {
+  width: 100%;
+  height: 100%;
+}
+
+.reviewWrapper .reviewContainer .a1 {
+  -webkit-transform: rotate(180deg);
+          transform: rotate(180deg);
+  opacity: 0;
 }
 
 .reviewWrapper .reviewContainer .reviewSection {
@@ -275,6 +302,27 @@ a {
   font-weight: 400;
 }
 
+.reviewWrapper .reviewPos1 {
+  -webkit-transform: none;
+          transform: none;
+  -webkit-transition: 0.7s linear;
+  transition: 0.7s linear;
+}
+
+.reviewWrapper .reviewPos2 {
+  -webkit-transform: translateX(-100%);
+          transform: translateX(-100%);
+  -webkit-transition: 0.7s linear;
+  transition: 0.7s linear;
+}
+
+.reviewWrapper .reviewPos3 {
+  -webkit-transform: translateX(-200%);
+          transform: translateX(-200%);
+  -webkit-transition: 0.7s linear;
+  transition: 0.7s linear;
+}
+
 .reviewWrapper .reviewDots {
   width: 4%;
   height: 2vmax;
@@ -288,11 +336,17 @@ a {
       justify-content: space-around;
 }
 
-.reviewWrapper .reviewDots .dot {
-  width: 0.6vmax;
-  height: 0.6vmax;
+.reviewWrapper .reviewDots .dot1,
+.reviewWrapper .reviewDots .dot2,
+.reviewWrapper .reviewDots .dot3 {
+  width: 0.8vmax;
+  height: 0.8vmax;
   border-radius: 50%;
   background-color: white;
+}
+
+.reviewWrapper .reviewDots .active {
+  background-color: #9c88ff;
 }
 
 .contactWrapper {
