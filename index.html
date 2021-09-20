@@ -9,6 +9,10 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;1,100;1,200;1,300;1,400;1,500;1,600&display=swap" rel="stylesheet">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/latest/TweenMax.min.js" integrity="sha512-8Wy4KH0O+AuzjMm1w5QfZ5j5/y8Q/kcUktK9mPUVaUoBvh3QPUZB822W/vy7ULqri3yR8daH3F58+Y8Z08qzeg==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/latest/TimelineMax.min.js" integrity="sha512-lJDBw/vKlGO8aIZB8/6CY4lV+EMAL3qzViHid6wXjH/uDrqUl+uvfCROHXAEL0T/bgdAQHSuE68vRlcFHUdrUw==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/ScrollMagic/2.0.8/ScrollMagic.min.js" integrity="sha512-8E3KZoPoZCD+1dgfqhPbejQBnQfBXe8FuwL4z/c8sTrgeDMFEnoyTlH3obB4/fV+6Sg0a0XF+L/6xS4Xx1fUEg==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/ScrollMagic/2.0.8/plugins/animation.gsap.js" integrity="sha512-judXDFLnOTJsUwd55lhbrX3uSoSQSOZR6vNrsll+4ViUFv+XOIr/xaIK96soMj6s5jVszd7I97a0H+WhgFwTEg==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
 </head>
 <body>
     <div class="mainWrapper">
@@ -34,10 +38,15 @@
         </div>
         <span></span>
         <span></span>
-        <h1>Najlepsza <a>szkoła<br> muzyczna</a>!</h1>
-        <h2>Idź przez życie z własnym rytmem i wspaniałą melodią już od najmłodszych lat! Poznaj nas bliżej i pozwól porwać się muzyce!
+        <h1 >Najlepsza <a>szkoła<br> muzyczna</a>!</h1>
+        <h2 id="trigger1">Idź przez życie z własnym rytmem i wspaniałą melodią już od najmłodszych lat! Poznaj nas bliżej i pozwól porwać się muzyce!
         </h2>
-        <div class="mainWrapperButton"></div>
+        <div class="mainWrapperButton">
+            <span></span>
+            <h3>Sprawdź!</h3>
+            <img src="./assets/icons/arrow3.png" alt="">
+            <span></span>
+        </div>
         <span></span>
         <span></span>
         <div class="goUp">
@@ -46,7 +55,6 @@
     </div>
     <div class="counterWrapper">
         <div class="counterBox">
-            <div class="counterIcon"></div>
             <div class="counter" data-target="700000"></div>
             <h3>Uczniów</h3>
         </div>

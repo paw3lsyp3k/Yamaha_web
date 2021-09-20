@@ -1,28 +1,57 @@
-/*Counter on 2nd wrapper*/
+/* animations */
+
+var tl1= new TimelineMax({onUpdate:updatePercentage});
+var tl2= new TimelineMax({onUpdate:updatePercentage});
+const controller = new ScrollMagic.Controller();
+
+tl1.from('.counterBox', .1, { y: 400, opacity: 0});
+tl2.from('.goUp', .1, { x: 400, opacity: 0});
+
+const scene1 = new ScrollMagic.Scene({
+	triggerElement: '#trigger1',
+	triggerHook: "onEnter",
+	duration: "100%"
+})
+
+.setTween(tl1)
+.addTo(controller);
+
+const scene2 = new ScrollMagic.Scene({
+	triggerElement: '#trigger1',
+	triggerHook: "onLeave",
+	duration: "50%"
+})
+
+.setTween(tl2)
+.addTo(controller);
+
+function updatePercentage() {
+	tl1.progress();
+	if(tl1.progress() === 1){
+	}
+};
+
+
+/* counter */
 const counters = document.querySelectorAll('.counter');
-
-counters.forEach(counter => {
-	// start with 0 by default
-	counter.innerText = '0';
-	
-	const updateCounter = () => {
-		const target = +counter.getAttribute('data-target');
-		const x = +counter.innerText;
+		counters.forEach(counter => {
+		// start with 0 by default
+			counter.innerText = '0';
+			const updateCounter = () => {
+			const target = +counter.getAttribute('data-target');
+			const x = +counter.innerText;
+			// speed
+			const increment = target / 100;
 		
-		// speed
-		const increment = target / 300;
-		
-		if(x < target) {
-			counter.innerText = `${Math.ceil(x + increment)}`;
-			setTimeout(updateCounter, 1)
-		} else {
-			counter.innerText = target;
-		}
-	};
-	
-	updateCounter();
-});
-
+			if(x < target) {
+				counter.innerText = `${Math.ceil(x + increment)}`;
+				setTimeout(updateCounter, 1)
+			} else {
+				counter.innerText = target;
+			}
+		};
+		updateCounter();
+		}); 
 /*Testimonials */
 
 let value=1;
@@ -79,7 +108,7 @@ function reviewCheck(){
 	}
 }
 
-
+/* Gallery script*/
 const gallery = document.getElementById('gallery');
 const popup = document.getElementById('popup');
 const selectedImage = document.getElementById('selectedImage');

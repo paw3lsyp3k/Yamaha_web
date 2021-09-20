@@ -62,9 +62,35 @@ a {
 }
 
 .mainWrapper .mainWrapperButton {
-  width: 20vmax;
+  width: 15vmax;
   height: 3vmax;
-  background-color: blanchedalmond;
+  border-radius: 10px;
+  background-color: white;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  -webkit-transition: 150ms ease-in;
+  transition: 150ms ease-in;
+  cursor: pointer;
+}
+
+.mainWrapper .mainWrapperButton h3 {
+  font-weight: 500;
+  font-size: 1.3vmax;
+}
+
+.mainWrapper .mainWrapperButton img {
+  width: 1.8vmax;
+}
+
+.mainWrapper .mainWrapperButton:hover {
+  color: white;
+  background-color: #9c88ff;
 }
 
 .mainWrapper .goUp {
