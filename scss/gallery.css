@@ -1,0 +1,103 @@
+* {
+  margin: 0;
+  padding: 0;
+  font-family: 'Montserrat', sans-serif;
+}
+
+.galleryContainer {
+  width: 100%;
+}
+
+.galleryContainer .callBack {
+  width: 15%;
+  padding: 2vmax 3vmax;
+}
+
+.galleryContainer .callBack a {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  text-decoration: none;
+  color: black;
+}
+
+.galleryContainer .callBack h3 {
+  padding-left: 5%;
+}
+
+.galleryContainer .callBack img {
+  width: 1.6vmax;
+  -webkit-transform: rotate(180deg);
+          transform: rotate(180deg);
+}
+
+.galleryContainer h1 {
+  text-align: center;
+  font-weight: 500;
+}
+
+.galleryContainer #gallery {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: (minmax(320px, 1fr))[auto-fit];
+      grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+  grid-gap: 1vmax;
+  width: 70%;
+  padding-top: 5%;
+  margin: auto;
+}
+
+.galleryContainer #gallery .galleryImg {
+  max-width: 100%;
+  border-radius: 10px;
+  position: relative;
+  -webkit-transition: -webkit-transform 250ms;
+  transition: -webkit-transform 250ms;
+  transition: transform 250ms;
+  transition: transform 250ms, -webkit-transform 250ms;
+  cursor: pointer;
+}
+
+.galleryContainer #gallery .galleryImg:hover {
+  -webkit-transform: translateY(-2px);
+          transform: translateY(-2px);
+  -webkit-box-shadow: 4px 4px 12px 0px black;
+  box-shadow: 4px 4px 12px 0px black;
+}
+
+.galleryContainer #popup {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(0, 0, 0, 0.9);
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-transform: translateY(-100%);
+          transform: translateY(-100%);
+  -webkit-transition: 250ms -webkit-transform;
+  transition: 250ms -webkit-transform;
+  transition: 250ms transform;
+  transition: 250ms transform, 250ms -webkit-transform;
+  padding: 10%;
+}
+
+.galleryContainer #popup #selectedImage {
+  max-height: 100%;
+  max-width: 100%;
+}
+/*# sourceMappingURL=gallery.css.map */

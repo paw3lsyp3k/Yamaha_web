@@ -1,0 +1,63 @@
+.topBar {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+}
+
+.topBar .logo {
+  width: 15%;
+  height: 70%;
+  background-image: url(../assets/yamaha.png);
+  background-position: center;
+  background-size: cover;
+}
+
+.topBar nav {
+  z-index: 9999;
+}
+
+.topBar nav .nav-btn i {
+  width: 10px;
+  height: 2px;
+}
+
+.topBar nav .hidden {
+  display: none;
+}
+
+.topBar nav ul {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  list-style: none;
+  width: 100%;
+}
+
+.topBar nav ul li {
+  margin: 0 1vmax 0 1vmax;
+}
+
+.topBar nav ul li a {
+  outline: none;
+  color: white;
+  text-transform: uppercase;
+  text-decoration: none;
+  font-size: 1.4vmax;
+  letter-spacing: 0.1vmax;
+  font-weight: 400;
+}
+
+.topBar nav ul li:last-child a {
+  color: #9c88ff;
+}
+/*# sourceMappingURL=menu.css.map */

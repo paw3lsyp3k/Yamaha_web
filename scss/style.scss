@@ -1,5 +1,5 @@
 $maincolor: #9c88ff;
-
+@import url(./menu.css);
 
 *{
     margin: 0;
@@ -34,7 +34,6 @@ a{
         position: absolute;
         top: 0;
         left: 0;
-        background-color: bisque;
     }
     h1{
         font-size: 5vmax;

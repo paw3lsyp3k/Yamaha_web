@@ -1,0 +1,45 @@
+
+.topBar{
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    .logo{
+        width: 15%;
+        height: 70%;
+        background-image: url(../assets/yamaha.png);
+        background-position: center;
+        background-size: cover;
+    } 
+    nav{
+        z-index: 9999;
+        .nav-btn i{
+            width: 10px;
+            height: 2px;
+        }
+        .hidden {
+            display: none;
+          }
+        ul{
+            display: flex;
+            align-items: center;
+            justify-content: space-around;
+            list-style: none;
+            width: 100%;
+            li{
+                margin: 0 1vmax 0 1vmax;
+                a{
+                    outline: none;
+                    color: white;
+                    text-transform: uppercase;
+                    text-decoration: none;
+                    font-size: 1.4vmax;
+                    letter-spacing: 0.1vmax;
+                    font-weight: 400;
+                }
+            }
+        }
+    }
+    nav ul li:last-child a {
+        color: #9c88ff;
+    }
+}
