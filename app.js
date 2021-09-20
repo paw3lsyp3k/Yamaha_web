@@ -1,5 +1,6 @@
-/* animations */
 
+
+/* animations */
 var tl1= new TimelineMax({onUpdate:updatePercentage});
 var tl2= new TimelineMax({onUpdate:updatePercentage});
 const controller = new ScrollMagic.Controller();
@@ -63,7 +64,7 @@ const reviewPlus = () => {
 	} else {
 		value = 3;
 	}
-}
+};
 
 const reviewMinus = () => {
 	value -= 1;
@@ -72,7 +73,7 @@ const reviewMinus = () => {
 	} else {
 		value = 1;
 	}
-}
+};
 
 function reviewCheck(){
 	const arrow1 = document.querySelector('.a1');
@@ -106,31 +107,6 @@ function reviewCheck(){
 		reviewBox.classList.remove('reviewPos2');
 		reviewBox.classList.add('reviewPos3');
 	}
-}
+};
 
 /* Gallery script*/
-const gallery = document.getElementById('gallery');
-const popup = document.getElementById('popup');
-const selectedImage = document.getElementById('selectedImage');
-const imageIndexes = [1,2,3,4,5,6,7,8,9];
-const selectedIndex = null;
-
-imageIndexes.forEach(i => {
-	const image = document.createElement('img');
-	image.src = `./assets/image${i}.jpg`;
-	image.alt = 'lol';
-	image.classList.add('galleryImg');
-
-	image.addEventListener('click', () => {
-		popup.style.transform = `translateY(0)`;
-		selectedImage.src = `./assets/image${i}.jpg`;
-	});
-
-	gallery.appendChild(image);
-});
-
-popup.addEventListener('click', () => {
-	popup.style.transform = `translateY(-100%)`;
-	popup.src = '';
-	popup.alt = '';
-});
