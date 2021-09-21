@@ -57,6 +57,9 @@ const counters = document.querySelectorAll('.counter');
 
 let value=1;
 
+const dots = document.querySelectorAll(".dot");
+console.log(dots.length);
+
 const reviewPlus = () => {
 	value += 1;
 	if(value <= 3){
