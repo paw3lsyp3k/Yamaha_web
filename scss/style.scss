@@ -28,6 +28,11 @@ a{
     align-items: flex-start;
     justify-content: space-around;
     padding-left: 15%;
+    @media screen and (orientation: portrait){
+            align-items: center;
+            padding-left: 0;;
+            text-align: center;  
+    }
     .topBar{
         width: 100%;
         height: 5vmax;
@@ -40,6 +45,10 @@ a{
         color: white;
         font-weight: 600;
         line-height: 6vmax;
+        @media screen and (orientation: portrait){
+            font-size: 6.5vmax; 
+            line-height: 7vmax;
+        }
     }
     h2{
         width: 38%;
@@ -48,28 +57,55 @@ a{
         font-weight: 400;
         margin-top: -4%;
         line-height: 1.7vmax;
+        @media screen and (orientation: portrait){
+            width: 60%;
+            margin-top: -6%;
+            font-size: 2vmax; 
+            line-height: 2.4vmax;
+        }
     }
     .mainWrapperButton{
         width: 15vmax;
         height: 3vmax;
-        border-radius: 10px;
+        border-radius: 30px;
         background-color: white;
         display: flex;
         align-items: center;
         justify-content: space-around;
         transition: 150ms ease-in;
         cursor: pointer;
+        @media screen and (orientation: portrait){
+            width: 40%;
+            height: 5vmax;
+        }
         h3 {
             font-weight: 500;
             font-size: 1.3vmax;
+            @media screen and (orientation: portrait){
+                font-size: 2vmax;
+            }
         }
-        img{
+        .buttonIcon{
             width: 1.8vmax;
+            height: 1.8vmax;
+            background-image: url(../assets/icons/arrow3.png);
+            background-position: center;
+            background-size: cover;
+            transition: 150ms ease-in;
+            @media screen and (orientation: portrait){
+                width: 2.1vmax;
+                height: 2.1vmax;
+            }
         }
     }
     .mainWrapperButton:hover{
         color: white;
         background-color: #9c88ff;
+    }
+    .mainWrapperButton:hover .buttonIcon{
+        background-image: url(../assets/icons/arrow4.png);
+        margin-left: 10%;
+        
     }
     .goUp{       
         position: fixed;
@@ -86,11 +122,20 @@ a{
         align-items: center;
         justify-content: center;
         cursor: pointer;
+        @media screen and (orientation: portrait){
+            right: 3vmax;
+            width: 5vmax;
+            height: 5vmax;
+        }  
         img{
             width: 40%;
             height: 40%;
             transform: rotate(270deg);
         }
+    }
+    .goUp:hover{
+        width: 3.5vmax;
+        height: 3.5vmax;
     }
 }
 .counterWrapper{
@@ -100,33 +145,53 @@ a{
     align-items: center;
     justify-content: space-around;
     padding: 4% 5% 8% 5%;
+    @media screen and (orientation: portrait){
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        grid-template-rows: 1fr 1fr;
+        grid-gap: 5vmax;
+        padding: 4% 5% 15% 5%;
+    }
     .counterBox{
         text-align: center;
         .counter{
             font-size: 1.8vmax; 
             padding-bottom: 1vmax;   
             color: #9c88ff; 
-            font-weight: 500;       
+            font-weight: 500; 
+            @media screen and (orientation: portrait){
+                font-size: 3vmax;
+            }      
         }
         h3{
             font-weight: 400;
             font-size: 1.4vmax;
+            @media screen and (orientation: portrait){
+                font-size: 2vmax;
+            }  
         }
     } 
 }
 .offerWrapper{
     background: linear-gradient(-1.5deg, #292929 3%, rgba(0, 0, 0, 0) 3.1%);
-    padding: 5% 25% 5% 25%;
+    padding: 5% 25%;
     display: grid;
     grid-template-columns: repeat(3, 1fr);
-    grid-template-rows: repeat(5,1fr);
     grid-gap: 5vmax;
+    @media screen and (orientation: portrait){
+        padding: 10% 15%;
+        grid-template-columns: repeat(2, 1fr); 
+    }  
     .offerTitle{
         grid-column-start: 1;
         grid-column-end: 4;
         text-align: center;
         font-weight: 400;
         font-size: 1.7vmax;
+        @media screen and (orientation: portrait){
+            grid-column-start: 1;
+            grid-column-end:3;
+        }  
         a{
             font-weight: bold;
         }
@@ -165,6 +230,11 @@ a{
         align-items: center;
         justify-content: space-around;
         padding: 1vmax 15% 1vmax 15%;
+        @media screen and (orientation: portrait){
+            
+            grid-column-start: 1;
+            grid-column-end:3;
+        } 
         h2{
             font-weight: 400;
             font-size: 2vmax;
@@ -175,6 +245,7 @@ a{
         background-color: $maincolor;
         width: 12vmax;
         height: 3vmax;
+        margin-top: 3vmax;
         border-radius: 30px;
         display: flex;
         flex-direction: column;
@@ -182,7 +253,14 @@ a{
         justify-content: center;
         font-size: 1vmax;
         color: white;
+        cursor: pointer;
         font-weight: 500;
+        transition: 350ms ease-out;
+    }
+    .offerButton:hover{
+        border: 5px solid $maincolor;
+        background-color: white;
+        color: $maincolor;
     }
 }
 .reviewWrapper{
