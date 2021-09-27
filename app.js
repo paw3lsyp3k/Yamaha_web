@@ -1,6 +1,6 @@
 
 
-/* animations */
+/* Apear animations */
 var tl1= new TimelineMax({onUpdate:updatePercentage});
 var tl2= new TimelineMax({onUpdate:updatePercentage});
 const controller = new ScrollMagic.Controller();
@@ -33,30 +33,30 @@ function updatePercentage() {
 };
 
 
-/* counter */
-const counters = document.querySelectorAll('.counter');
-		counters.forEach(counter => {
-		// start with 0 by default
-			counter.innerText = '0';
-			const updateCounter = () => {
-			const target = +counter.getAttribute('data-target');
-			const x = +counter.innerText;
-			// speed
-			const increment = target / 100;
-		
-			if(x < target) {
-				counter.innerText = `${Math.ceil(x + increment)}`;
-				setTimeout(updateCounter, 1)
-			} else {
-				counter.innerText = target;
-			}
-		};
-		updateCounter();
-		}); 
+/* Counters animation */
+	const counters = document.querySelectorAll('.counter');
+	counters.forEach(counter => {
+	// start with 0 by default
+		counter.innerText = '0';
+		const updateCounter = () => {
+		const target = +counter.getAttribute('data-target');
+		const x = +counter.innerText;
+		// speed
+		const increment = target / 100;
+	
+		if(x < target) {
+			counter.innerText = `${Math.ceil(x + increment)}`;
+			setTimeout(updateCounter, 1)
+		} else {
+			counter.innerText = target;
+		}
+	};
+	updateCounter();		
+	});
+
+
 /*Testimonials */
-
 let value=1;
-
 const dots = document.querySelectorAll(".dot");
 console.log(dots.length);
 
@@ -112,4 +112,12 @@ function reviewCheck(){
 	}
 };
 
-/* Gallery script*/
+/* mobile menu closing after click*/
+
+const menuItem = document.querySelectorAll('.menuButton');
+const menuCheck = document.getElementById('nav-toggle');
+menuItem.forEach(item => {
+	item.onclick = () =>{
+		menuCheck.checked = false;
+	}
+});

@@ -74,6 +74,13 @@
   margin: auto;
 }
 
+@media screen and (orientation: portrait) {
+  .galleryContainer #gallery {
+    -ms-grid-columns: (minmax(220px, 1fr))[auto-fit];
+        grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  }
+}
+
 .galleryContainer #gallery .galleryImg {
   max-width: 100%;
   border-radius: 10px;

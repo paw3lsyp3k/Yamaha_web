@@ -25,8 +25,18 @@ header {
   }
 }
 
+header .nav-landscape {
+  display: block;
+}
+
+@media screen and (orientation: portrait) {
+  header .nav-landscape {
+    display: none;
+  }
+}
+
 header .logo {
-  width: 55%;
+  width: 50%;
   height: 7vmax;
 }
 
@@ -38,8 +48,8 @@ header .logo {
 
 @media screen and (orientation: landscape) {
   header .logo {
-    height: 4vmax;
-    width: 20%;
+    height: 3.5vmax;
+    width: 15%;
   }
 }
 
@@ -73,7 +83,7 @@ header nav {
     -webkit-transform: scale(1, 1);
             transform: scale(1, 1);
     height: unset;
-    width: 30%;
+    width: 20%;
     background-color: unset;
   }
 }
