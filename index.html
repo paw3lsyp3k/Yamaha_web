@@ -15,27 +15,26 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/ScrollMagic/2.0.6/plugins/animation.gsap.min.js"></script>
 </head>
 <body>
-    <div class="mainWrapper">
-        <div class="topBar">
-            <div class="logo"></div>
+    <div class="mainWrapper">   
+        <header>
             <span></span>
+            <div class="logo">
+                <img src="./assets/yamaha.png" alt="">
+            </div> 
             <span></span>
-            <nav>
-                <input type="checkbox" id="nav" class="hidden" />
-                <label for="nav" class="nav-btn">
-                    <i></i>
-                    <i></i>
-                    <i></i>
-                </label>
-                <div class="nav-wrapper" id="menu">
-                    <ul>
-                      <li><a href="#" id="button2">Oferta</a></li>
-                      <li><a href="./gallery.html">Galeria</a></li>
-                      <li><a href="#" id="button3">Kontakt</a></li>
-                    </ul>
-                  </div>
+            <input type="checkbox" id="nav-toggle" class="nav-toggle">
+            <nav>                  
+                <ul>
+                    <li><a href="#" id="button1">Home</a></li>
+                    <li><a href="#" id="button2">Oferta</a></li>
+                    <li><a href="./gallery.html">Galeria</a></li>
+                    <li><a href="#" id="button3">Kontakt</a></li>
+                </ul>
             </nav>
-        </div>
+            <label for="nav-toggle" class="nav-toggle-label">
+                <span></span>
+            </label>
+        </header>
         <span></span>
         <span></span>
         <h1 >Najlepsza <a>szkoła<br> muzyczna</a>!</h1>

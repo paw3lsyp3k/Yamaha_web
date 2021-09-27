@@ -1,4 +1,11 @@
-.topBar {
+header {
+  width: 100%;
+  place-items: center;
+  position: fixed;
+  padding: 3% 0;
+  top: 0;
+  left: 0;
+  z-index: 999;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -7,57 +14,189 @@
           align-items: center;
   -ms-flex-pack: distribute;
       justify-content: space-around;
+  background-color: #9c88ff;
 }
 
-.topBar .logo {
-  width: 15%;
-  height: 70%;
-  background-image: url(../assets/yamaha.png);
-  background-position: center;
-  background-size: cover;
+@media screen and (orientation: landscape) {
+  header {
+    padding: 1vmax 0;
+    background-color: unset;
+    position: absolute;
+  }
 }
 
-.topBar nav {
-  z-index: 9999;
+header .logo {
+  width: 55%;
+  height: 7vmax;
 }
 
-.topBar nav .nav-btn i {
-  width: 10px;
-  height: 2px;
+@media screen and (min-width: 740px) {
+  header .logo {
+    width: 40%;
+  }
 }
 
-.topBar nav .hidden {
+@media screen and (orientation: landscape) {
+  header .logo {
+    height: 4vmax;
+    width: 20%;
+  }
+}
+
+header .logo img {
+  width: 100%;
+  height: 100%;
+}
+
+header nav {
+  position: absolute;
+  text-align: left;
+  top: 100%;
+  left: 0;
+  width: 100%;
+  height: 35vh;
+  background-color: white;
+  -webkit-transform: scale(1, 0);
+          transform: scale(1, 0);
+  -webkit-transform-origin: top;
+          transform-origin: top;
+  -webkit-transition: -webkit-transform 300ms ease-in-out;
+  transition: -webkit-transform 300ms ease-in-out;
+  transition: transform 300ms ease-in-out;
+  transition: transform 300ms ease-in-out, -webkit-transform 300ms ease-in-out;
+  overflow-y: hidden;
+}
+
+@media screen and (orientation: landscape) {
+  header nav {
+    position: relative;
+    -webkit-transform: scale(1, 1);
+            transform: scale(1, 1);
+    height: unset;
+    width: 30%;
+    background-color: unset;
+  }
+}
+
+header nav ul {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  height: 100%;
+}
+
+@media screen and (orientation: landscape) {
+  header nav ul {
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+  }
+}
+
+header nav ul li {
+  margin-left: 4vmax;
+}
+
+@media screen and (orientation: landscape) {
+  header nav ul li {
+    margin: 0;
+  }
+}
+
+header nav ul li a {
+  color: black;
+  text-decoration: none;
+  font-size: 2vmax;
+  font-weight: 500;
+  text-transform: uppercase;
+  opacity: 0;
+  -webkit-transition: opacity 150ms ease-in-out;
+  transition: opacity 150ms ease-in-out;
+}
+
+@media screen and (orientation: landscape) {
+  header nav ul li a {
+    opacity: 1;
+    font-size: 1.4vmax;
+    color: white;
+    text-transform: unset;
+    font-weight: 400;
+  }
+}
+
+header nav ul li a:hover {
+  color: #9c88ff;
+}
+
+header nav ul li:last-child a {
+  color: #9c88ff;
+}
+
+header .nav-toggle {
   display: none;
 }
 
-.topBar nav ul {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  -ms-flex-pack: distribute;
-      justify-content: space-around;
-  list-style: none;
-  width: 100%;
+header .nav-toggle:checked ~ nav {
+  -webkit-transform: scale(1, 1);
+          transform: scale(1, 1);
 }
 
-.topBar nav ul li {
-  margin: 0 1vmax 0 1vmax;
+header .nav-toggle:checked ~ nav a {
+  opacity: 1;
+  -webkit-transition: opacity 250ms ease-in-out 250ms;
+  transition: opacity 250ms ease-in-out 250ms;
 }
 
-.topBar nav ul li a {
-  outline: none;
-  color: white;
-  text-transform: uppercase;
-  text-decoration: none;
-  font-size: 1.4vmax;
-  letter-spacing: 0.1vmax;
-  font-weight: 400;
+header .nav-toggle:checked ~ header {
+  background-color: #9c88ff;
 }
 
-.topBar nav ul li:last-child a {
-  color: #9c88ff;
+header .nav-toggle-label span,
+header .nav-toggle-label span::before,
+header .nav-toggle-label span::after {
+  display: block;
+  background-color: white;
+  height: 2px;
+  width: 25px;
+  border-radius: 2px;
+  position: relative;
+}
+
+@media screen and (orientation: landscape) {
+  header .nav-toggle-label span,
+  header .nav-toggle-label span::before,
+  header .nav-toggle-label span::after {
+    display: none;
+  }
+}
+
+header .nav-toggle-label span::before,
+header .nav-toggle-label span::after {
+  content: '';
+  position: absolute;
+}
+
+header .nav-toggle-label span::before {
+  bottom: 8px;
+}
+
+header .nav-toggle-label span::after {
+  top: 8px;
 }
 /*# sourceMappingURL=menu.css.map */

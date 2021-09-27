@@ -30,7 +30,7 @@ a{
     padding-left: 15%;
     @media screen and (orientation: portrait){
             align-items: center;
-            padding-left: 0;;
+            padding-left: 0;
             text-align: center;  
     }
     .topBar{
@@ -67,7 +67,7 @@ a{
             line-height: 2.4vmax;
         }
         @media screen and (max-width: 500px){
-            width: 90%; 
+            width: 80%; 
         }
     }
     .mainWrapperButton{
@@ -85,7 +85,7 @@ a{
             height: 5vmax;
         }
         @media screen and (max-width: 500px){
-            width: 60%; 
+            width: 50%; 
         }
         h3 {
             font-weight: 500;
@@ -143,8 +143,12 @@ a{
         }
     }
     .goUp:hover{
-        width: 5.5vmax;
+        width: 3.5vmax;
+        height: 3.5vmax;
+        @media screen and (orientation: portrait){
+            width: 5.5vmax;
         height: 5.5vmax;
+        }  
     }
 }
 .counterWrapper{
