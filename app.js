@@ -58,7 +58,6 @@ function updatePercentage() {
 /*Testimonials */
 let value=1;
 const dots = document.querySelectorAll(".dot");
-console.log(dots.length);
 
 const reviewPlus = () => {
 	value += 1;
